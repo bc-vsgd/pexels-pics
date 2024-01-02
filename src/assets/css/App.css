@@ -1,0 +1,9 @@
+@import "./reset.css";
+
+.pics-display-div {
+  display: flex;
+}
+.pics-display-div div {
+  display: flex;
+  flex-direction: column;
+}
