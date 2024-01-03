@@ -14,14 +14,8 @@ const App = () => {
       <main>
         {/* Form: user choices */}
         <Form setPhotos={setPhotos} />
-        {/* <div>
-          {photos.length !== 0 && (
-            <img src={photos[0].src.medium} alt={photos[0].alt}></img>
-          )}
-        </div> */}
         {/* Pictures display; props: photos array */}
-        {photos.length !== 0 && <PicsDisplay photos={photos} />}
-        {/* <PicsDisplay /> */}
+        {photos.length !== 0 && <PicsDisplay photos={photos} showed={0} />}
       </main>
       <Footer />
     </>

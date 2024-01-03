@@ -7,3 +7,48 @@
   display: flex;
   flex-direction: column;
 }
+.btn-and-pics-div button {
+  background-color: white;
+  border-radius: 50%;
+}
+button:hover {
+  cursor: pointer;
+}
+
+/* Not common */
+
+.btn-and-pics-div {
+  position: relative;
+  border: 1px solid black;
+}
+
+.pics-display-div {
+  width: 1024px;
+  margin: 100px auto;
+  overflow: hidden;
+}
+.btn-and-pics-div button {
+  height: 50px;
+  width: 50px;
+}
+.fa-chevron-left,
+.fa-chevron-right {
+  font-size: 32px;
+}
+#prev-btn {
+  position: absolute;
+  left: 450px;
+  top: 300px;
+}
+#next-btn {
+  position: absolute;
+  right: 450px;
+  top: 300px;
+}
+.showed {
+  margin: 0 auto;
+}
+.pics-display-div .showed img {
+  height: 500px;
+  object-fit: cover;
+}
