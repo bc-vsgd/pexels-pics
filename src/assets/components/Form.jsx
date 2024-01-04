@@ -1,7 +1,7 @@
 import pexels from "../js/pexels";
 
 const Form = (props) => {
-  const { setPhotos } = props;
+  const { setPhotos, per_page } = props;
   return (
     <form>
       <label>Choisir la langue</label>
@@ -22,10 +22,8 @@ const Form = (props) => {
           const language = document.querySelector("#language-select").value;
           const theme = document.querySelector("#theme-input").value;
           //   Get pictures
-          const photos = await pexels(language, theme);
+          const photos = await pexels(language, theme, per_page);
           setPhotos(photos);
-          console.log(photos);
-          console.log(photos[0].url);
         }}
       >
         Afficher les images

@@ -3,10 +3,6 @@
 .pics-display-div {
   display: flex;
 }
-.pics-display-div div {
-  display: flex;
-  flex-direction: column;
-}
 .btn-and-pics-div button {
   background-color: white;
   border-radius: 50%;
@@ -25,30 +21,32 @@ button:hover {
 .pics-display-div {
   width: 1024px;
   margin: 100px auto;
-  overflow: hidden;
+  display: flex;
+  overflow: scroll;
+}
+.pics-display-div > div {
+  display: flex;
+}
+.pics-display-div img {
+  height: 500px;
+  object-fit: cover;
 }
 .btn-and-pics-div button {
   height: 50px;
   width: 50px;
 }
 .fa-chevron-left,
-.fa-chevron-right {
+.fa-chevron-right,
+.fa-download {
   font-size: 32px;
 }
 #prev-btn {
   position: absolute;
-  left: 450px;
+  left: 350px;
   top: 300px;
 }
 #next-btn {
   position: absolute;
   right: 450px;
   top: 300px;
-}
-.showed {
-  margin: 0 auto;
-}
-.pics-display-div .showed img {
-  height: 500px;
-  object-fit: cover;
 }
