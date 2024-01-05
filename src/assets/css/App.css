@@ -19,17 +19,35 @@ button:hover {
 }
 
 .pics-display-div {
-  width: 1024px;
+  width: 800px;
   margin: 100px auto;
   display: flex;
-  overflow: scroll;
+  overflow-y: scroll;
+}
+.pics-display-div::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 .pics-display-div > div {
   display: flex;
 }
-.pics-display-div img {
-  height: 500px;
-  object-fit: cover;
+.pic-div {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+}
+.pic-div img {
+  max-width: 800px;
+  margin: 0 auto;
+  object-fit: contain;
+}
+.pic-div div {
+  margin: 0 auto;
+  border: 1px solid green;
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
 }
 .btn-and-pics-div button {
   height: 50px;

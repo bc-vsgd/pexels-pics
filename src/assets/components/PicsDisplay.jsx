@@ -5,36 +5,38 @@ const PicsDisplay = (props) => {
   const { photos, num, per_page } = props;
   const [index, setIndex] = useState(num);
   const [widthCounter, setWidthCounter] = useState(0);
-  console.log("PicsDisplayDiv", index, widthCounter);
+  // console.log("PicsDisplayDiv", index, widthCounter);
   return (
     <div className="btn-and-pics-div">
-      {/* <button
+      <button
         id="prev-btn"
         onClick={() => {
           picsButton(
             index,
             setIndex,
-            per_page,
             widthCounter,
             setWidthCounter,
+            per_page,
             "-"
           );
         }}
       >
         <i className="fa-solid fa-chevron-left"></i>
-      </button> */}
+      </button>
       <div className="pics-display-div">
         <div>
           {photos.map((photo, ind) => {
             return (
-              <div key={ind}>
+              <div key={ind} className="pic-div">
                 <img src={photo.src.large} alt={photo.alt} id={`img-${ind}`} />
-                <a href={photo.photographer_url} target="_blank">
-                  {photo.photographer}
-                </a>
-                <a href={photo.url} target="_blank">
-                  Pexels.com
-                </a>
+                <div>
+                  <a href={photo.photographer_url} target="_blank">
+                    {photo.photographer}
+                  </a>
+                  <a href={photo.url} target="_blank">
+                    Pexels.com
+                  </a>
+                </div>
               </div>
             );
           })}
@@ -46,9 +48,9 @@ const PicsDisplay = (props) => {
           picsButton(
             index,
             setIndex,
-            per_page,
             widthCounter,
             setWidthCounter,
+            per_page,
             "+"
           );
         }}

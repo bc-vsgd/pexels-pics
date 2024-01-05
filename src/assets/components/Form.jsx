@@ -4,16 +4,14 @@ const Form = (props) => {
   const { setPhotos, per_page } = props;
   return (
     <form>
-      <label>Choisir la langue</label>
       <select name="languages" id="language-select">
-        <option value="fr-FR">Français</option>
+        <option value="fr-FR" selected>
+          Français
+        </option>
         <option value="en-US">English</option>
         <option value="de-DE">Deutsch</option>
       </select>
-      <label>
-        Saisir un thème
-        <input type="text" id="theme-input" />
-      </label>
+      <input type="text" id="theme-input" placeholder="Saisir un thème" />
       <button
         type="submit"
         onClick={async (e) => {
